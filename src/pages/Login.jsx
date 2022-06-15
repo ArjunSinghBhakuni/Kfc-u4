@@ -8,9 +8,15 @@ import {
 } from "@chakra-ui/react";
 import { Button } from "bootstrap";
 import React from "react";
+import { useContext } from "react";
+import { AuthContext, AuthProvider } from "../context/AuthConext";
 import "../styles/Login.module.css";
 
 const Login = () => {
+const [isAuth,dispatch] = useContext(AuthContext)
+
+
+
   return (
     <form className="form-box">
       <Center>
@@ -52,7 +58,7 @@ const Login = () => {
           </div>
         </div>
 
-        <button type="submit"   className="btn btn-dark btn-lg btn-block">
+        <button onClick={()=>dispatch(   {type:'HANDLELOGIN'})} className="btn btn-dark btn-lg btn-block">
           Sign in
         </button>
       </Stack>

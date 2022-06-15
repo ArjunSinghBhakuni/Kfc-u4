@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import {
   Box,
@@ -24,8 +24,10 @@ import {
 
 } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../context/AuthConext';
 
 const Navbar = () => {
+  const [isAuth,dispatch] = useContext(AuthContext)
   return (
     <div>
       <Box  >
@@ -43,7 +45,7 @@ const Navbar = () => {
           <HStack spacing={7} marginLeft={"10%"} >
             <HStack spacing={4} >
               <Img src={'https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg'} />
-              <Heading fontSize={"16px"}> <NavLink to='account'>Account</NavLink> </Heading>
+              <Heading fontSize={"16px"}> <NavLink to='account'> {isAuth ? "Account" : "Sign In"}  </NavLink> </Heading>
             </HStack>
             <HStack spacing={0} >
 
