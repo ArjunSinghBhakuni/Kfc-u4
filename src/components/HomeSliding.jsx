@@ -10,8 +10,7 @@ const HomeSliding = () => {
   ];
 
 
-  return <div>
-    
+  return <div>   
 
    <Img src={"https://images.ctfassets.net/wtodlh47qxpt/4w2NU51eNqAlF0S4k3YLTB/0d9dd4031fc40bd266a2b4ac49834491/1440_x_396_Value_Burger.jpg?w=1280&fit=fill&fm=webp"} />
   </div>;
