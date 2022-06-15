@@ -45,13 +45,14 @@ const Login = () => {
             <FormLabel
               className="custom-control-FormLabel"
               htmlFor="customCheck1"
-            >
-              Remember me
+            >  
+                Remember me
+                
             </FormLabel>
           </div>
         </div>
 
-        <button type="submit" className="btn btn-dark btn-lg btn-block">
+        <button type="submit"   className="btn btn-dark btn-lg btn-block">
           Sign in
         </button>
       </Stack>
